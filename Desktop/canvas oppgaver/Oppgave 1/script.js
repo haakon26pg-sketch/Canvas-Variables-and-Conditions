@@ -7,8 +7,6 @@ ved å bruke en av metodene vi viste i første forelesning.
 <-- Finn index.html-filen i filutforskeren og koble den til denne filen,
 javascript.js
 ******************************************************************************/
-    
-    <script> src="script.js"</script>
 
 /******************************************************************************
 OPPGAVE 2
@@ -23,14 +21,20 @@ typer verdier. Lag noen variabler med følgende datatyper:
 Du kan velge hva innholdet i variablene skal være. Prøv å bruke både let og 
 const når du definerer variablene.
 ******************************************************************************/
-let userheight = 1.55;
+
+let userName = "BilboSwaggins";
+let userHeight = 1.75;
+let isTallEnough = false;
+const hobbies = ["Gaming", "Coding", "Music"];
+
 const minimumHeight = 1.60;
 
-if (userheight >= 1.60) {
-    console.log("User is tall enough for rollercoaster")
+if (userHeight >= minimumHeight) {
+    console.log("User is tall enough for rollercoaster");
 } else {
-    console.log("User is not tall enough for rollercoaster")
+    console.log("User is not tall enough for rollercoaster");
 }
+
 /******************************************************************************
 OPPGAVE 3
 
@@ -42,13 +46,15 @@ Skriv noen eksempler der du tester disse operatorene.
 ******************************************************************************/
 5 + 5;
 10 / 20;
-20 +
+20 + 5;
 
 let score = 5;
 
 score++;
 
-console.log(score);
+console.log(5+5);
+console.log(10/20);
+console.log(20+5);
 
 /******************************************************************************
 OPPGAVE 4
@@ -83,13 +89,13 @@ let userIsLoggedIn = false;
 let userIsBlocked = false;
 let goToPage = "";
 
-if (username !== "" && userAge >= 18 && userIsBlocked === false) {
-        userIsLoggedIn = true;
-        goToPage= "/home";
+if (username !== "" && userAge >= 18 && !userIsBlocked) {
+    userIsLoggedIn = true;
+    goToPage = "/home";
 
-        console.log("Velkommen " + username + "!");
+    console.log("Velkommen " + username + "!");
 } else {
-        console.log("Kunne ikke logge inn.");
+    console.log("Kunne ikke logge inn.");
 }
 /******************************************************************************
 OPPGAVE 5
@@ -105,8 +111,6 @@ const variabel = betingelse ? "hvis sann" : "hvis usann";
 Prøv å endre userMale til både true og false og bruk console.log for å sjekke
 at betingelsen din fungerer som den skal.
 ******************************************************************************/
-
-const userMale = false;
 
 let userMale = true;
 
