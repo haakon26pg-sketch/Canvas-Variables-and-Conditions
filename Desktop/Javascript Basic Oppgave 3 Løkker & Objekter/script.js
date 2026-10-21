@@ -71,7 +71,7 @@ hobbies: ["boxing", "wrestling", "mma", "coding"]
 name: "Otto",
 male: true,
 age: 36,
-hobbies: ["movies", "cinema", "music", "coding"]
+hobbies: ["movies", "cinema", "music"]
 },
 {
 name: "Annabelle",
@@ -144,8 +144,17 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 2 her
+function diceRoller(antall) {
+  const resultater = [];
 
+  for (let i = 0; i < antall; i++) {
+    const kast = Math.floor(Math.random() * 20) + 1;
+
+    resultater.push(kast);
+  }
+  return resultater;
+}
+console.log(diceRoller(4));
 /******************************************************************************
 3.
 
@@ -171,7 +180,18 @@ skal returnere:
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 3 her
+const text = [" thIS", "teXt  ", " nEeds ", "to", "BE", "cleANED   ", " Up"];
+
+function textFix(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i].trim().toLowerCase();
+    console.log(`${text}`);
+  }
+
+  return array;
+}
+
+console.log(textFix(text));
 
 /******************************************************************************
 4.
@@ -199,9 +219,25 @@ skal returnere "whao is ohe ptino tf ohis?"
 ******************************************************************************/
 
 function doubleSwap(string, charA, charB) {
-// Skriv koden for oppgave 4 her
+let result = "";
+
+for (let i = 0; i < string.length; i++) {
+  if (string[i] === charA) {
+    result += charB;
+  } else if (string[i] === charB) {
+    result += charA;
+  } else {
+    result += string[i];
+  }
 }
 
+return result;
+
+}
+
+console.log(doubleSwap("this is a string", "i", "s"));
+console.log(doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a"));
+console.log(doubleSwap("what is the point of this?", "o", "t"));
 /******************************************************************************
 5.
 
